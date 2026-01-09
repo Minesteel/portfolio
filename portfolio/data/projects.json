@@ -1,0 +1,31 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "E-Commerce Platform",
+            "description": "A full-stack e-commerce solution with React and Node.js",
+            "image": "/images/ecommerce.jpg",
+            "tags": ["React", "Node.js", "MongoDB"],
+            "link": "https://github.com/example/ecommerce",
+            "date": "2023-06-15"
+        },
+        {
+            "id": 2,
+            "title": "Weather App",
+            "description": "Real-time weather application using OpenWeather API",
+            "image": "/images/weather.jpg",
+            "tags": ["Vue.js", "API", "Tailwind CSS"],
+            "link": "https://github.com/example/weather-app",
+            "date": "2023-04-20"
+        },
+        {
+            "id": 3,
+            "title": "Task Management Tool",
+            "description": "Collaborative task manager with real-time updates",
+            "image": "/images/tasks.jpg",
+            "tags": ["TypeScript", "Firebase", "React"],
+            "link": "https://github.com/example/task-manager",
+            "date": "2023-02-10"
+        }
+    ]
+}
