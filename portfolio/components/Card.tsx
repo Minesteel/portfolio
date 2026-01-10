@@ -21,7 +21,7 @@ export default function Card({ data }: CardProps) {
                 {data.tags.map((tag, index) => (
                     <span 
                         key={index} 
-                        className="bg-fuchsia-200 text-fuchsia-900 text-sm font-medium mr-2 px-2.5 py-0.5 rounded"
+                        className="bg-fuchsia-200 text-fuchsia-900 text-sm font-medium mr-2 px-2.5 py-0.5 rounded-full"
                     >
                         {tag}
                     </span>

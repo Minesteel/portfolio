@@ -2,7 +2,11 @@ import Image from 'next/image'
 import { Button } from '@/components/Button';
 import Card from '@/components/Card';
 import projects from '@/data/projects.json';
+import skillsData from '@/data/skills.json';
+import SkillBadge from '@/components/SkillBadge';
+import { SkillProps } from '@/types/skill';
 
+const skills = skillsData.skills as SkillProps[];
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
@@ -24,25 +28,18 @@ export default function Home() {
             <Button name="Contactez-moi"></Button>
           </div>
         </section>
-        <section className="p-6" id="about">
+        <section className="p-6 h-screen" id="about">
           <h2 className="text-4xl font-bold mb-6">- À propos -</h2>
         </section>
-        <section className="p-6" id="skills">
+        <section className="p-6 h-screen" id="skills">
           <h2 className="text-4xl font-bold mb-6">- Compétences -</h2>
-          <div className="text-center">
-            <ul>
-              <li>Java</li>
-              <li>JavaScript / TypeScript</li>
-              <li>React</li>
-              <li>Next.js</li>
-              <li>Node.js</li>
-              <li>Python</li>
-              <li>C++</li>
-              <li>SQL</li>
-            </ul>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {skills.map((skill) => (
+              <SkillBadge key={skill.id} data={skill} />
+            ))}
           </div>
         </section>
-        <section className="p-6" id="projects">
+        <section className="p-6 h-screen" id="projects">
           <h2 className="text-4xl font-bold mb-6">- Projets -</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.projects.map((project) => (
@@ -50,10 +47,10 @@ export default function Home() {
             ))}
             </div>
         </section>
-        <section className="p-6" id="degrees">
+        <section className="p-6 h-screen" id="degrees">
           <h2 className="text-4xl font-bold mb-6">- Diplômes -</h2>
         </section>
-        <section className="p-6" id="contact">
+        <section className="p-6 h-screen" id="contact">
           <h2 className="text-4xl font-bold mb-6">- Contact -</h2>
         </section>
       </main>

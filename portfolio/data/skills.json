@@ -1,0 +1,40 @@
+{
+    "skills": [
+        {
+            "id": 1,
+            "name": "JavaScript",
+            "level": "advanced",
+            "category": "language"
+        },
+        {
+            "id": 2,
+            "name": "TypeScript",
+            "level": "advanced",
+            "category": "language"
+        },
+        {
+            "id": 3,
+            "name": "React",
+            "level": "beginner",
+            "category": "framework"
+        },
+        {
+            "id": 4,
+            "name": "Node.js",
+            "level": "intermediate",
+            "category": "framework"
+        },
+        {
+            "id": 5,
+            "name": "C",
+            "level": "advanced",
+            "category": "language"
+        },
+        {
+            "id": 6,
+            "name": "Java",
+            "level": "advanced",
+            "category": "language"
+        }
+    ]
+}
