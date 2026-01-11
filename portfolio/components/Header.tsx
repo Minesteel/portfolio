@@ -1,7 +1,6 @@
 // components/Header.tsx
 "use client"
 import { PanelLeftClose, PanelLeftOpen } from 'lucide-react'
-import Link from 'next/link';
 
 interface HeaderProps {
   isCollapsed: boolean;
@@ -31,7 +30,7 @@ export default function Header({ isCollapsed, toggleSidebar }: HeaderProps) {
                   targetElement.scrollIntoView({ behavior: 'smooth' });
                 }
               }}>
-          <h1 className="font-bold text-lg tracking-tight">MonPortfolio</h1>
+          <h1 className="font-bold text-3xl tracking-tight ">MonPortfolio</h1>
         </a>
       </div>
 

@@ -3,7 +3,7 @@ import { CardProps } from '@/types/cardproject';
 
 export default function Card({ data }: CardProps) {
     return (
-        <div className="border rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow ">
+        <div className="bg-neutral-800 rounded-xl shadow-lg p-6 shadow-md">
             <h3 className="text-2xl font-semibold mb-4">{data.title}</h3>
             <div className="relative overflow-hidden rounded-md mb-4 group">
                 <Image

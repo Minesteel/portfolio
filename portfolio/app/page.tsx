@@ -1,10 +1,12 @@
+"use client"
 import Image from 'next/image'
-import { Button } from '@/components/Button';
 import Card from '@/components/Card';
 import projects from '@/data/projects.json';
 import skillsData from '@/data/skills.json';
 import SkillBadge from '@/components/SkillBadge';
 import { SkillProps } from '@/types/skill';
+import ContactSection from '@/pages/Contact';
+import { Download } from 'lucide-react';
 
 const skills = skillsData.skills as SkillProps[];
 export default function Home() {
@@ -23,15 +25,23 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/40 -z-10" />
           
           <div className="text-center text-white">
-            <h1 className="text-6xl font-bold mb-4"> - Loris Pineaud - </h1>
+            <h1 className="text-6xl font-bold mb-4 text-fuchsia-400"> - Loris Pineaud - </h1>
             <p className="text-2xl mb-8">Ingénieur logiciel en devenir<br/>Actuellement en Master 1 Génie logiciel</p>
-            <Button name="Contactez-moi"></Button>
+        <button className="px-4 py-2 bg-fuchsia-500 text-white rounded-lg hover:bg-fuchsia-600 hover:cursor-pointer transition-colors duration-300" 
+        onClick={() => {
+                const targetElement = document.querySelector('#contact');
+                if (targetElement) {
+                  targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}>
+            Contactez-moi
+            </button>
           </div>
         </section>
-        <section className="p-6 h-screen" id="about">
+        <section className="p-6 min-h-screen" id="about">
           <h2 className="text-4xl font-bold mb-6">- À propos -</h2>
         </section>
-        <section className="p-6 h-screen" id="skills">
+        <section className="p-6 min-h-screen" id="skills">
           <h2 className="text-4xl font-bold mb-6">- Compétences -</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {skills.map((skill) => (
@@ -39,7 +49,7 @@ export default function Home() {
             ))}
           </div>
         </section>
-        <section className="p-6 h-screen" id="projects">
+        <section className="p-6 min-h-screen" id="projects">
           <h2 className="text-4xl font-bold mb-6">- Projets -</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.projects.map((project) => (
@@ -47,11 +57,22 @@ export default function Home() {
             ))}
             </div>
         </section>
-        <section className="p-6 h-screen" id="degrees">
+        <section className="p-6 min-h-screen" id="degrees">
           <h2 className="text-4xl font-bold mb-6">- Diplômes -</h2>
         </section>
-        <section className="p-6 h-screen" id="contact">
+        <section className="p-6 min-h-screen" id="contact">
           <h2 className="text-4xl font-bold mb-6">- Contact -</h2>
+          <ContactSection />
+        <div className="flex justify-center mt-8">
+          <button 
+            className="px-4 py-2 bg-fuchsia-500 text-white rounded-lg hover:bg-fuchsia-600 hover:cursor-pointer transition-colors duration-300" 
+            onClick={() => 
+              {}
+            }
+            >
+             <Download className="inline-block mr-2" /> Télécharger mon CV
+          </button>
+        </div>
         </section>
       </main>
 
