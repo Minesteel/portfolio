@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { CardProps } from '@/types/cardproject';
+import { CardProps } from '@/types/project';
 
 export default function Card({ data }: CardProps) {
     return (

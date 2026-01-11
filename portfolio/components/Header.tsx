@@ -22,7 +22,7 @@ export default function Header({ isCollapsed, toggleSidebar }: HeaderProps) {
       </div>
 
       <div className="justify-self-center hover:bg-fuchsia-600 rounded-full p-2 transition-colors duration-300 hover:text-white text-fuchsia-400">
-        <a href="#hero" className=""
+        <button className="hover:cursor-pointer"
         onClick={(e) => {
                 e.preventDefault();
                 const targetElement = document.querySelector('#hero');
@@ -31,7 +31,7 @@ export default function Header({ isCollapsed, toggleSidebar }: HeaderProps) {
                 }
               }}>
           <h1 className="font-bold text-3xl tracking-tight ">MonPortfolio</h1>
-        </a>
+        </button>
       </div>
 
       <select name="languages" id="language-select" className="justify-self-end rounded-md p-1 bg-neutral-700 text-white hover:cursor-pointer hover:bg-neutral-600 transition-colors">
