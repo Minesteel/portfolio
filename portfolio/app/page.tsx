@@ -5,13 +5,14 @@ import projectsData from '@/data/projects.json';
 import skillsData from '@/data/skills.json';
 import SkillBadge from '@/components/SkillBadge';
 import { SkillProps } from '@/types/skill';
-import { ProjectsProps } from '@/types/project';
+import { ProjectProps } from '@/types/project';
 import ContactSection from '@/pages/Contact';
 import { Download } from 'lucide-react';
 import { useState } from 'react';
+import Timeline from '@/components/TimeLine';
 
 const skills = skillsData.skills as SkillProps[];
-const projects = projectsData.projects as ProjectsProps[];
+const projects = projectsData.projects as ProjectProps[];
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState('Description');
@@ -160,10 +161,10 @@ export default function Home() {
                   <li>
                     <button 
                       className={`p-1 rounded-xl transition-colors hover:bg-fuchsia-600 hover:text-white hover:cursor-pointer ${
-                        activeTabProjects === 'Perso' ? 'bg-fuchsia-600 text-white' : 'text-gray-300'
+                        activeTabProjects === 'perso' ? 'bg-fuchsia-600 text-white' : 'text-gray-300'
                       }`}
                        onClick={()=>{
-                        setActiveTabProjects('Perso');
+                        setActiveTabProjects('perso');
                         const perso = document.getElementById('perso');
                         const school = document.getElementById('school');
                         const work = document.getElementById('work');
@@ -228,8 +229,9 @@ export default function Home() {
           </div>
         </div>
         </section>
-        <section className="p-6 min-h-screen" id="degrees">
-          <h2 className="text-4xl font-bold mb-6">- Diplômes -</h2>
+        <section className="p-6 min-h-screen" id="experience">
+          <h2 className="text-4xl font-bold mb-6">- Expériences -</h2>
+          <Timeline />
         </section>
         <section className="p-6 min-h-screen" id="contact">
           <h2 className="text-4xl font-bold mb-6">- Contact -</h2>
@@ -249,9 +251,9 @@ export default function Home() {
 
       <footer className="flex flex-col items-center justify-center w-full h-24 border-t gap-4 ">
         <div className="flex space-x-4">
-          <a href="/" className='hover:text-fuchsia-400 transition-colors'>Github</a>
+          <a href="https://github.com/Minesteel" className='hover:text-fuchsia-400 transition-colors'>Github</a>
           <span>|</span>
-          <a href="/" className='hover:text-fuchsia-400 transition-colors'>Linkedin</a>
+          <a href="https://www.linkedin.com/in/loris-pineaud-b785762a6" className='hover:text-fuchsia-400 transition-colors'>Linkedin</a>
         </div>
         <div className="text-sm text-gray-500">
           ©Loris Pineaud. Tous droits réservés.

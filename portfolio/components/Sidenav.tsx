@@ -13,7 +13,7 @@ const navItems = [
   { name: 'À propos', href: '#about', icon: User },
   { name: 'Compétences', href: '#skills', icon: Folder },
   { name: 'Projets', href: '#projects', icon: Briefcase },
-  { name: 'Diplôme', href: '#degrees', icon: GraduationCap },
+  { name: 'Expériences', href: '#experience', icon: GraduationCap },
   { name: 'Contact', href: '#contact', icon: Mail },
 ]
 
