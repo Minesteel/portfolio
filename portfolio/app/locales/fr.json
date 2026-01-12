@@ -1,0 +1,18 @@
+{
+  "logo": {
+    "alt": "Logo Next.js"
+  },
+  "title": "Pour commencer, modifiez le fichier page.tsx.",
+  "description": {
+    "intro": "Vous cherchez un point de départ ou plus d'instructions ? Rendez-vous sur",
+    "templates": "Modèles",
+    "or": "ou le",
+    "learning": "Centre d'apprentissage",
+    "end": "."
+  },
+  "buttons": {
+    "deploy": "Déployer maintenant",
+    "deployAlt": "Logo Vercel",
+    "documentation": "Documentation"
+  }
+}
