@@ -1,6 +1,7 @@
 // components/Header.tsx
 "use client"
 import { PanelLeftClose, PanelLeftOpen } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 interface HeaderProps {
   isCollapsed: boolean;
@@ -8,6 +9,8 @@ interface HeaderProps {
 }
 
 export default function Header({ isCollapsed, toggleSidebar }: HeaderProps) {
+  const { language, setLanguage, t } = useLanguage();
+
   return (
     <header className="h-16 bg-neutral-800 grid grid-cols-3 items-center px-6 sticky top-0 z-30">
       <div>
@@ -30,11 +33,17 @@ export default function Header({ isCollapsed, toggleSidebar }: HeaderProps) {
                   targetElement.scrollIntoView({ behavior: 'smooth' });
                 }
               }}>
-          <h1 className="font-bold text-3xl tracking-tight ">MonPortfolio</h1>
+          <h1 className="font-bold text-3xl tracking-tight ">{t.header.title}</h1>
         </button>
       </div>
 
-      <select name="languages" id="language-select" className="justify-self-end rounded-md p-1 bg-neutral-700 text-white hover:cursor-pointer hover:bg-neutral-600 transition-colors">
+      <select 
+        name="languages" 
+        id="language-select" 
+        className="justify-self-end rounded-md p-1 bg-neutral-700 text-white hover:cursor-pointer hover:bg-neutral-600 transition-colors"
+        value={language}
+        onChange={(e) => setLanguage(e.target.value as 'fr' | 'en')}
+      >
         <option value="fr">FR</option>
         <option value="en">EN</option>
       </select>

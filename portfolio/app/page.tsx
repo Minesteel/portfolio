@@ -10,11 +10,13 @@ import ContactSection from '@/pages/Contact';
 import { Download } from 'lucide-react';
 import { useState } from 'react';
 import Timeline from '@/components/TimeLine';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const skills = skillsData.skills as SkillProps[];
 const projects = projectsData.projects as ProjectProps[];
 
 export default function Home() {
+  const { t } = useLanguage();
   const [activeTab, setActiveTab] = useState('Description');
   const [activeTabProjects, setActiveTabProjects] = useState('perso');
 
@@ -33,8 +35,8 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/40 -z-10" />
           
           <div className="text-center text-white">
-            <h1 className="text-6xl font-bold mb-4 text-fuchsia-400"> - Loris Pineaud - </h1>
-            <p className="text-2xl mb-8">Ingénieur logiciel en devenir<br/>Actuellement étudiant en Master 1 Génie logiciel</p>
+            <h1 className="text-6xl font-bold mb-4 text-fuchsia-400">{t.hero.name}</h1>
+            <p className="text-2xl mb-8">{t.hero.title}<br/>{t.hero.subtitle}</p>
         <button className="px-4 py-2 bg-fuchsia-500 text-white rounded-lg hover:bg-fuchsia-600 hover:cursor-pointer transition-colors duration-300" 
         onClick={() => {
                 const targetElement = document.querySelector('#contact');
@@ -42,12 +44,12 @@ export default function Home() {
                   targetElement.scrollIntoView({ behavior: 'smooth' });
                 }
               }}>
-            Contactez-moi
+            {t.hero.cta}
             </button>
           </div>
         </section>
         <section className="p-6 min-h-screen" id="about">
-          <h2 className="text-4xl font-bold mb-6">- À propos -</h2>
+          <h2 className="text-4xl font-bold mb-6">{t.about.title}</h2>
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
             <div className="flex-1">
               <Image 
@@ -77,7 +79,7 @@ export default function Home() {
                         }
                        }}
                       >
-                        Déscription
+                        {t.about.tabs.description}
                     </button>
                   </li>
                   <li>
@@ -97,7 +99,7 @@ export default function Home() {
                         }
                        }}
                     >
-                      Infos
+                      {t.about.tabs.info}
                     </button>
                   </li>
                   <li>
@@ -117,7 +119,7 @@ export default function Home() {
                         }
                        }}
                     >
-                      Passions
+                      {t.about.tabs.passions}
                     </button>
                   </li>
                 </ul>
@@ -125,20 +127,20 @@ export default function Home() {
               <div className="backdrop-blur-sm bg-neutral-800 p-4 rounded-lg">
                 <div className="" id='Description'>
                   <p>
-                    Bonjour! Je m'appelle Loris Pineaud, un passionné de technologie et d'innovation. Actuellement en Master 1 de Génie Logiciel, je suis déterminé à devenir un ingénieur logiciel compétent et créatif. Mon parcours académique m'a permis d'acquérir des compétences solides en développement logiciel, en gestion de projets et en résolution de problèmes complexes. Je suis constamment à la recherche de nouvelles opportunités pour apprendre et grandir dans le domaine du génie logiciel.
+                    {t.about.description}
                   </p>
                 </div>
                 <div className="hidden" id='Infos'>
                   <p>
-                    Âge : {new Date().getFullYear() - 2003 - (new Date() < new Date(new Date().getFullYear(), 9, 19) ? 1 : 0)} ans<br/>
-                    Localisation : Bordeaux, France<br/>
-                    Email : loris.pineaud003@gmail.com<br/>
-                    Téléphone : +33 7 83 44 16 33<br/>
+                    {t.about.info.age} : {new Date().getFullYear() - 2003 - (new Date() < new Date(new Date().getFullYear(), 9, 19) ? 1 : 0)} {t.about.info.years}<br/>
+                    {t.about.info.location} : {t.about.info.locationValue}<br/>
+                    {t.about.info.email} : loris.pineaud003@gmail.com<br/>
+                    {t.about.info.phone} : +33 7 83 44 16 33<br/>
                   </p>
                 </div>
                 <div className="hidden" id='Passions'>
                   <p>
-                    En dehors du codage, j'aime explorer les dernières tendances technologiques, participer à des hackathons et contribuer à des projets open source. J'apprécie également la lecture de livres sur le développement personnel et la technologie, ainsi que le voyage pour découvrir de nouvelles cultures et perspectives.
+                    {t.about.passions}
                   </p>
                 </div>
               </div>
@@ -146,7 +148,7 @@ export default function Home() {
           </div>
         </section>
         <section className="p-6 min-h-screen" id="skills">
-          <h2 className="text-4xl font-bold mb-6">- Compétences -</h2>
+          <h2 className="text-4xl font-bold mb-6">{t.skills.title}</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {skills.map((skill) => (
               <SkillBadge key={skill.id} data={skill} />
@@ -154,7 +156,7 @@ export default function Home() {
           </div>
         </section>
         <section className="p-6 min-h-screen" id="projects">
-          <h2 className="text-4xl font-bold mb-6">- Projets -</h2>
+          <h2 className="text-4xl font-bold mb-6">{t.projects.title}</h2>
           <div className="flex-2 text-lg w-full">
               <div className="flex justify-center mb-4">
                 <ul className="flex w-full justify-around space-x-4">
@@ -175,7 +177,7 @@ export default function Home() {
                         }
                        }}
                       >
-                        Personnel
+                        {t.projects.tabs.personal}
                     </button>
                   </li>
                   <li>
@@ -195,7 +197,7 @@ export default function Home() {
                         }
                        }}
                     >
-                      Académique
+                      {t.projects.tabs.academic}
                     </button>
                   </li>
                   <li>
@@ -215,7 +217,7 @@ export default function Home() {
                         }
                        }}
                     >
-                      Professionnel
+                      {t.projects.tabs.professional}
                     </button>
                   </li>
                 </ul>
@@ -230,11 +232,11 @@ export default function Home() {
         </div>
         </section>
         <section className="p-6 min-h-screen" id="experience">
-          <h2 className="text-4xl font-bold mb-6">- Expériences -</h2>
+          <h2 className="text-4xl font-bold mb-6">{t.experience.title}</h2>
           <Timeline />
         </section>
         <section className="p-6 min-h-screen" id="contact">
-          <h2 className="text-4xl font-bold mb-6">- Contact -</h2>
+          <h2 className="text-4xl font-bold mb-6">{t.contact.title}</h2>
           <ContactSection />
         <div className="flex justify-center mt-8">
           <button 
@@ -243,7 +245,7 @@ export default function Home() {
               {}
             }
             >
-             <Download className="inline-block mr-2" /> Télécharger mon CV
+             <Download className="inline-block mr-2" /> {t.contact.downloadCV}
           </button>
         </div>
         </section>
@@ -256,7 +258,7 @@ export default function Home() {
           <a href="https://www.linkedin.com/in/loris-pineaud-b785762a6" className='hover:text-fuchsia-400 transition-colors'>Linkedin</a>
         </div>
         <div className="text-sm text-gray-500">
-          ©Loris Pineaud. Tous droits réservés.
+          {t.footer.rights}
         </div>
       </footer>
     </div>

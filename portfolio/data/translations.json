@@ -1,0 +1,142 @@
+{
+  "fr": {
+    "header": {
+      "title": "MonPortfolio"
+    },
+    "nav": {
+      "home": "Accueil",
+      "about": "À propos",
+      "skills": "Compétences",
+      "projects": "Projets",
+      "experience": "Expériences",
+      "contact": "Contact"
+    },
+    "hero": {
+      "name": "- Loris Pineaud -",
+      "title": "Ingénieur logiciel en devenir",
+      "subtitle": "Actuellement étudiant en Master 1 Génie logiciel",
+      "cta": "Contactez-moi"
+    },
+    "about": {
+      "title": "- À propos -",
+      "tabs": {
+        "description": "Déscription",
+        "info": "Infos",
+        "passions": "Passions"
+      },
+      "description": "Bonjour! Je m'appelle Loris Pineaud, un passionné de technologie et d'innovation. Actuellement en Master 1 de Génie Logiciel, je suis déterminé à devenir un ingénieur logiciel compétent et créatif. Mon parcours académique m'a permis d'acquérir des compétences solides en développement logiciel, en gestion de projets et en résolution de problèmes complexes. Je suis constamment à la recherche de nouvelles opportunités pour apprendre et grandir dans le domaine du génie logiciel.",
+      "info": {
+        "age": "Âge",
+        "years": "ans",
+        "location": "Localisation",
+        "locationValue": "Bordeaux, France",
+        "email": "Email",
+        "phone": "Téléphone"
+      },
+      "passions": "En dehors du codage, j'aime explorer les dernières tendances technologiques, participer à des hackathons et contribuer à des projets open source. J'apprécie également la lecture de livres sur le développement personnel et la technologie, ainsi que le voyage pour découvrir de nouvelles cultures et perspectives."
+    },
+    "skills": {
+      "title": "- Compétences -"
+    },
+    "projects": {
+      "title": "- Projets -",
+      "tabs": {
+        "personal": "Personnel",
+        "academic": "Académique",
+        "professional": "Professionnel"
+      }
+    },
+    "experience": {
+      "title": "- Expériences -"
+    },
+    "contact": {
+      "title": "- Contact -",
+      "sectionTitle": "Contactez-moi",
+      "sectionSubtitle": "Une question ou une proposition ? Envoyez-moi un message.",
+      "form": {
+        "name": "Nom complet",
+        "namePlaceholder": "Jean Dupont",
+        "email": "Adresse Email",
+        "emailPlaceholder": "jean@exemple.fr",
+        "message": "Votre message",
+        "messagePlaceholder": "Comment puis-je vous aider ?",
+        "submit": "Envoyer le message",
+        "success": "Message envoyé avec succès !"
+      },
+      "downloadCV": "Télécharger mon CV"
+    },
+    "footer": {
+      "rights": "©Loris Pineaud. Tous droits réservés."
+    }
+  },
+  "en": {
+    "header": {
+      "title": "MyPortfolio"
+    },
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "skills": "Skills",
+      "projects": "Projects",
+      "experience": "Experience",
+      "contact": "Contact"
+    },
+    "hero": {
+      "name": "- Loris Pineaud -",
+      "title": "Software Engineer in the Making",
+      "subtitle": "Currently a Master's Student in Software Engineering",
+      "cta": "Contact Me"
+    },
+    "about": {
+      "title": "- About -",
+      "tabs": {
+        "description": "Description",
+        "info": "Info",
+        "passions": "Passions"
+      },
+      "description": "Hello! My name is Loris Pineaud, a technology and innovation enthusiast. Currently pursuing a Master's degree in Software Engineering, I am determined to become a skilled and creative software engineer. My academic journey has allowed me to acquire solid skills in software development, project management, and solving complex problems. I am constantly looking for new opportunities to learn and grow in the field of software engineering.",
+      "info": {
+        "age": "Age",
+        "years": "years old",
+        "location": "Location",
+        "locationValue": "Bordeaux, France",
+        "email": "Email",
+        "phone": "Phone"
+      },
+      "passions": "Outside of coding, I enjoy exploring the latest technological trends, participating in hackathons, and contributing to open-source projects. I also appreciate reading books on personal development and technology, as well as traveling to discover new cultures and perspectives."
+    },
+    "skills": {
+      "title": "- Skills -"
+    },
+    "projects": {
+      "title": "- Projects -",
+      "tabs": {
+        "personal": "Personal",
+        "academic": "Academic",
+        "professional": "Professional"
+      }
+    },
+    "experience": {
+      "title": "- Experience -"
+    },
+    "contact": {
+      "title": "- Contact -",
+      "sectionTitle": "Contact Me",
+      "sectionSubtitle": "A question or a proposal? Send me a message.",
+      "form": {
+        "name": "Full Name",
+        "namePlaceholder": "John Doe",
+        "email": "Email Address",
+        "emailPlaceholder": "john@example.com",
+        "message": "Your Message",
+        "messagePlaceholder": "How can I help you?",
+        "submit": "Send Message",
+        "success": "Message sent successfully!"
+      },
+      "downloadCV": "Download my CV"
+    },
+    "footer": {
+      "rights": "©Loris Pineaud. All rights reserved."
+    }
+  }
+}

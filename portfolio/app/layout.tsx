@@ -4,6 +4,7 @@
 import { useState } from 'react'
 import Header from '@/components/Header'
 import Sidenav from '@/components/Sidenav'
+import { LanguageProvider } from '@/contexts/LanguageContext'
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -27,19 +28,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="flex flex-col h-screen">
-          <Header isCollapsed={isCollapsed} toggleSidebar={toggleSidebar} />
-          
-          <div className="flex flex-1 overflow-hidden">
-            <Sidenav isCollapsed={isCollapsed} />
+        <LanguageProvider>
+          <div className="flex flex-col h-screen">
+            <Header isCollapsed={isCollapsed} toggleSidebar={toggleSidebar} />
             
-            <main className="flex-1 overflow-y-auto">
-              <div className="">
-                {children}
-              </div>
-            </main>
+            <div className="flex flex-1 overflow-hidden">
+              <Sidenav isCollapsed={isCollapsed} />
+              
+              <main className="flex-1 overflow-y-auto">
+                <div className="">
+                  {children}
+                </div>
+              </main>
+            </div>
           </div>
-        </div>
+        </LanguageProvider>
       </body>
     </html>
   )

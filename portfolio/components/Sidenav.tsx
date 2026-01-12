@@ -3,21 +3,23 @@
 
 import Link from 'next/link'
 import { Home, User, Folder, GraduationCap, Briefcase, Mail } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 interface SidenavProps {
   isCollapsed: boolean;
 }
 
-const navItems = [
-  { name: 'Accueil', href: '#hero', icon: Home },
-  { name: 'À propos', href: '#about', icon: User },
-  { name: 'Compétences', href: '#skills', icon: Folder },
-  { name: 'Projets', href: '#projects', icon: Briefcase },
-  { name: 'Expériences', href: '#experience', icon: GraduationCap },
-  { name: 'Contact', href: '#contact', icon: Mail },
-]
-
 export default function Sidenav({ isCollapsed }: SidenavProps) {
+  const { t } = useLanguage();
+
+  const navItems = [
+    { name: t.nav.home, href: '#hero', icon: Home },
+    { name: t.nav.about, href: '#about', icon: User },
+    { name: t.nav.skills, href: '#skills', icon: Folder },
+    { name: t.nav.projects, href: '#projects', icon: Briefcase },
+    { name: t.nav.experience, href: '#experience', icon: GraduationCap },
+    { name: t.nav.contact, href: '#contact', icon: Mail },
+  ]
 
   return (
     <aside className={`
