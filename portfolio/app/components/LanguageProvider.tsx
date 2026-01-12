@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect, useRef, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import frTranslations from '@/app/locales/fr.json';
 import enTranslations from '@/app/locales/en.json';
 
@@ -38,14 +38,10 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   };
 
   const [language, setLanguageState] = useState<Language>(getInitialLanguage);
-  const isInitialMount = useRef(true);
 
-  // Update document lang on client after hydration
+  // Update document lang on mount and when language changes
   useEffect(() => {
-    if (isInitialMount.current) {
-      isInitialMount.current = false;
-      document.documentElement.lang = language;
-    }
+    document.documentElement.lang = language;
   }, [language]);
 
   const setLanguage = (lang: Language) => {

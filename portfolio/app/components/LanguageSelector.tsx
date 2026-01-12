@@ -9,11 +9,13 @@ export function LanguageSelector() {
     setLanguage(language === 'fr' ? 'en' : 'fr');
   };
 
+  const targetLanguage = language === 'fr' ? 'English' : 'Français';
+
   return (
     <button
       onClick={toggleLanguage}
       className="flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-black/[.08] px-4 text-sm font-medium transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
-      aria-label="Toggle language"
+      aria-label={`Switch to ${targetLanguage}`}
     >
       <span className="text-zinc-950 dark:text-zinc-50">
         {language.toUpperCase()}
