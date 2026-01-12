@@ -47,7 +47,6 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
     localStorage.setItem('language', lang);
-    document.documentElement.lang = lang;
   };
 
   const value: LanguageContextType = {
@@ -58,9 +57,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
 
   return (
     <LanguageContext.Provider value={value}>
-      <div suppressHydrationWarning>
-        {children}
-      </div>
+      {children}
     </LanguageContext.Provider>
   );
 }
