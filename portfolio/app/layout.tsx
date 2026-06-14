@@ -6,6 +6,7 @@ import Header from '@/components/Header'
 import Sidenav from '@/components/Sidenav'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import { Geist, Geist_Mono } from "next/font/google";
+// @ts-ignore
 import "./globals.css";
 
 const geistSans = Geist({
