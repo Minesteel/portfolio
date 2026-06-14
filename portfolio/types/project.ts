@@ -5,6 +5,5 @@ export interface ProjectProps {
   image: string;
   tags: string[];
   link: string;
-  date: string;
   type: "perso" | "school" | "work";
 }

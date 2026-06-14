@@ -1,34 +1,56 @@
 {
-    "projects": [
-        {
-            "id": 1,
-            "title": "Portfolio Website V1",
-            "description": "Portfolio website built with React and Next.js",
-            "image": "/porfolioV1.png",
-            "tags": ["next.js", "React", "Tailwind CSS"],
-            "link": "https://github.com/example/portfolio-v1",
-            "date": "2023-06-15",
-            "type": "perso"
-        },
-        {
-            "id": 2,
-            "title": "Weather App",
-            "description": "Real-time weather application using OpenWeather API",
-            "image": "/weather.jpg",
-            "tags": ["Vue.js", "API", "Tailwind CSS"],
-            "link": "https://github.com/example/weather-app",
-            "date": "2023-04-20",
-            "type": "school"
-        },
-        {
-            "id": 3,
-            "title": "Task Management Tool",
-            "description": "Collaborative task manager with real-time updates",
-            "image": "/tasks.jpg",
-            "tags": ["TypeScript", "Firebase", "React"],
-            "link": "https://github.com/example/task-manager",
-            "date": "2023-02-10",
-            "type": "work"
-        }
-    ]
+  "projects": [
+    {
+      "id": 1,
+      "title": "Portfolio Website V1",
+      "description": "Développement d'un portfolio personnel en Next.js, React et Tailwind CSS. Le site est responsive.",
+      "image": "/porfolioV1.png",
+      "tags": [
+        "next.js",
+        "React",
+        "Tailwind CSS"
+      ],
+      "link": "https://github.com/Minesteel/portfolio",
+      "type": "perso"
+    },
+    {
+      "id": 2,
+      "title": "Carcassonne",
+      "description": "Carcassonne développé en Java avec une équipe de 5 personnes. J'ai participé à la conception de l'architecture du projet, et à l'implémentation du core.",
+      "image": "/carcassonne.png",
+      "tags": [
+        "Java",
+        "Architecture",
+        "Design Patterns",
+        "Equipe"
+      ],
+      "link": "https://github.com/Minesteel/carcassonne",
+      "type": "school"
+    },
+    {
+      "id": 3,
+      "title": "Bot Discord",
+      "description": "Développement en equipe d'un bot capable de gérer des commandes basiques (exclure, mute, ping) et plus complexes (sondage, emploi du temps).",
+      "image": "!",
+      "tags": [
+        "JavaScript",
+        "SQL",
+        "API"
+      ],
+      "link": "!",
+      "type": "perso"
+    },
+    {
+      "id": 4,
+      "title": "SpotNight",
+      "description": "Développement d'une application permettant de recensé des événements festifs en fonctions de la localisation et des préférences.",
+      "image": "!",
+      "tags": [
+        "Ionic",
+        "Angular"
+      ],
+      "link": "!",
+      "type": "perso"
+    }
+  ]
 }

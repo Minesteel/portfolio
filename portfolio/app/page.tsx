@@ -6,7 +6,7 @@ import skillsData from '@/data/skills.json';
 import SkillBadge from '@/components/SkillBadge';
 import { SkillProps } from '@/types/skill';
 import { ProjectProps } from '@/types/project';
-import ContactSection from '@/pages/Contact';
+import ContactSection from '@/components/Contact';
 import { Download } from 'lucide-react';
 import { useState } from 'react';
 import Timeline from '@/components/TimeLine';
@@ -31,20 +31,20 @@ export default function Home() {
             priority
             className="object-cover -z-10"
           />
-          
+
           <div className="absolute inset-0 bg-black/40 -z-10" />
-          
+
           <div className="text-center text-white">
             <h1 className="text-6xl font-bold mb-4 text-fuchsia-400">{t.hero.name}</h1>
-            <p className="text-2xl mb-8">{t.hero.title}<br/>{t.hero.subtitle}</p>
-        <button className="px-4 py-2 bg-fuchsia-500 text-white rounded-lg hover:bg-fuchsia-600 hover:cursor-pointer transition-colors duration-300" 
-        onClick={() => {
+            <p className="text-2xl mb-8">{t.hero.title}<br />{t.hero.subtitle}</p>
+            <button className="px-4 py-2 bg-fuchsia-500 text-white rounded-lg hover:bg-fuchsia-600 hover:cursor-pointer transition-colors duration-300"
+              onClick={() => {
                 const targetElement = document.querySelector('#contact');
                 if (targetElement) {
                   targetElement.scrollIntoView({ behavior: 'smooth' });
                 }
               }}>
-            {t.hero.cta}
+              {t.hero.cta}
             </button>
           </div>
         </section>
@@ -52,72 +52,69 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-6">{t.about.title}</h2>
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
             <div className="flex-1">
-              <Image 
-                src="/profile1.jpg" 
-                alt="Profile Picture" 
-                width={200} height={200} 
+              <Image
+                src="/profile1.jpg"
+                alt="Profile Picture"
+                width={200} height={200}
                 className="rounded-lg object-cover mx-auto md:mx-0 border-2 border-fuchsia-500 shadow-lg"
-                />
+              />
             </div>
             <div className="flex-2 text-lg w-full">
               <div className="flex justify-center mb-4">
                 <ul className="flex w-full justify-around space-x-4">
                   <li>
-                    <button 
-                      className={`p-1 rounded-xl transition-colors hover:bg-fuchsia-600 hover:text-white hover:cursor-pointer ${
-                        activeTab === 'Description' ? 'bg-fuchsia-600 text-white' : 'text-gray-300'
-                      }`}
-                       onClick={()=>{
+                    <button
+                      className={`p-1 rounded-xl transition-colors hover:bg-fuchsia-600 hover:text-white hover:cursor-pointer ${activeTab === 'Description' ? 'bg-fuchsia-600 text-white' : 'text-gray-300'
+                        }`}
+                      onClick={() => {
                         setActiveTab('Description');
                         const desc = document.getElementById('Description');
                         const infos = document.getElementById('Infos');
                         const passions = document.getElementById('Passions');
-                        if(desc && infos && passions){
+                        if (desc && infos && passions) {
                           desc.classList.remove('hidden');
                           infos.classList.add('hidden');
                           passions.classList.add('hidden');
                         }
-                       }}
-                      >
-                        {t.about.tabs.description}
+                      }}
+                    >
+                      {t.about.tabs.description}
                     </button>
                   </li>
                   <li>
-                    <button 
-                    className={`p-1 rounded-xl transition-colors hover:bg-fuchsia-600 hover:text-white hover:cursor-pointer ${
-                      activeTab === 'Infos' ? 'bg-fuchsia-600 text-white' : 'text-gray-300'
-                    }`}
-                    onClick={()=>{
+                    <button
+                      className={`p-1 rounded-xl transition-colors hover:bg-fuchsia-600 hover:text-white hover:cursor-pointer ${activeTab === 'Infos' ? 'bg-fuchsia-600 text-white' : 'text-gray-300'
+                        }`}
+                      onClick={() => {
                         setActiveTab('Infos');
                         const desc = document.getElementById('Description');
                         const infos = document.getElementById('Infos');
                         const passions = document.getElementById('Passions');
-                        if(desc && infos && passions){
+                        if (desc && infos && passions) {
                           desc.classList.add('hidden');
                           infos.classList.remove('hidden');
                           passions.classList.add('hidden');
                         }
-                       }}
+                      }}
                     >
                       {t.about.tabs.info}
                     </button>
                   </li>
                   <li>
-                    <button 
-                    className={`p-1 rounded-xl transition-colors hover:bg-fuchsia-600 hover:text-white hover:cursor-pointer ${
-                      activeTab === 'Passions' ? 'bg-fuchsia-600 text-white' : 'text-gray-300'
-                    }`}
-                    onClick={()=>{
+                    <button
+                      className={`p-1 rounded-xl transition-colors hover:bg-fuchsia-600 hover:text-white hover:cursor-pointer ${activeTab === 'Passions' ? 'bg-fuchsia-600 text-white' : 'text-gray-300'
+                        }`}
+                      onClick={() => {
                         setActiveTab('Passions');
                         const desc = document.getElementById('Description');
                         const infos = document.getElementById('Infos');
                         const passions = document.getElementById('Passions');
-                        if(desc && infos && passions){
+                        if (desc && infos && passions) {
                           desc.classList.add('hidden');
                           infos.classList.add('hidden');
                           passions.classList.remove('hidden');
                         }
-                       }}
+                      }}
                     >
                       {t.about.tabs.passions}
                     </button>
@@ -132,10 +129,10 @@ export default function Home() {
                 </div>
                 <div className="hidden" id='Infos'>
                   <p>
-                    {t.about.info.age} : {new Date().getFullYear() - 2003 - (new Date() < new Date(new Date().getFullYear(), 9, 19) ? 1 : 0)} {t.about.info.years}<br/>
-                    {t.about.info.location} : {t.about.info.locationValue}<br/>
-                    {t.about.info.email} : loris.pineaud003@gmail.com<br/>
-                    {t.about.info.phone} : +33 7 83 44 16 33<br/>
+                    {t.about.info.age} : {new Date().getFullYear() - 2003 - (new Date() < new Date(new Date().getFullYear(), 9, 19) ? 1 : 0)} {t.about.info.years}<br />
+                    {t.about.info.location} : {t.about.info.locationValue}<br />
+                    {t.about.info.email} : loris.pineaud003@gmail.com<br />
+                    {t.about.info.phone} : +33 7 83 44 16 33<br />
                   </p>
                 </div>
                 <div className="hidden" id='Passions'>
@@ -158,78 +155,75 @@ export default function Home() {
         <section className="p-6 min-h-screen" id="projects">
           <h2 className="text-4xl font-bold mb-6">{t.projects.title}</h2>
           <div className="flex-2 text-lg w-full">
-              <div className="flex justify-center mb-4">
-                <ul className="flex w-full justify-around space-x-4">
-                  <li>
-                    <button 
-                      className={`p-1 rounded-xl transition-colors hover:bg-fuchsia-600 hover:text-white hover:cursor-pointer ${
-                        activeTabProjects === 'perso' ? 'bg-fuchsia-600 text-white' : 'text-gray-300'
+            <div className="flex justify-center mb-4">
+              <ul className="flex w-full justify-around space-x-4">
+                <li>
+                  <button
+                    className={`p-1 rounded-xl transition-colors hover:bg-fuchsia-600 hover:text-white hover:cursor-pointer ${activeTabProjects === 'perso' ? 'bg-fuchsia-600 text-white' : 'text-gray-300'
                       }`}
-                       onClick={()=>{
-                        setActiveTabProjects('perso');
-                        const perso = document.getElementById('perso');
-                        const school = document.getElementById('school');
-                        const work = document.getElementById('work');
-                        if(perso && school && work){
-                          perso.classList.remove('hidden');
-                          school.classList.add('hidden');
-                          work.classList.add('hidden');
-                        }
-                       }}
-                      >
-                        {t.projects.tabs.personal}
-                    </button>
-                  </li>
-                  <li>
-                    <button 
-                    className={`p-1 rounded-xl transition-colors hover:bg-fuchsia-600 hover:text-white hover:cursor-pointer ${
-                      activeTabProjects === 'school' ? 'bg-fuchsia-600 text-white' : 'text-gray-300'
-                    }`}
-                    onClick={()=>{
-                        setActiveTabProjects('school');
-                        const perso = document.getElementById('perso');
-                        const school = document.getElementById('school');
-                        const work = document.getElementById('work');
-                        if(perso && school && work){
-                          perso.classList.add('hidden');
-                          school.classList.remove('hidden');
-                          work.classList.add('hidden');
-                        }
-                       }}
-                    >
-                      {t.projects.tabs.academic}
-                    </button>
-                  </li>
-                  <li>
-                    <button 
-                    className={`p-1 rounded-xl transition-colors hover:bg-fuchsia-600 hover:text-white hover:cursor-pointer ${
-                      activeTabProjects === 'work' ? 'bg-fuchsia-600 text-white' : 'text-gray-300'
-                    }`}
-                    onClick={()=>{
-                        setActiveTabProjects('work');
-                        const perso = document.getElementById('perso');
-                        const school = document.getElementById('school');
-                        const work = document.getElementById('work');
-                        if(perso && school && work){
-                          perso.classList.add('hidden');
-                          school.classList.add('hidden');
-                          work.classList.remove('hidden');
-                        }
-                       }}
-                    >
-                      {t.projects.tabs.professional}
-                    </button>
-                  </li>
-                </ul>
-              </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project) => (
-              <div id={project.type} key={project.id} className={project.type === activeTabProjects.toLowerCase() ? '' : 'hidden'}>
-                <Card key={project.id} data={project} />
-              </div>
-            ))}
+                    onClick={() => {
+                      setActiveTabProjects('perso');
+                      const perso = document.getElementById('perso');
+                      const school = document.getElementById('school');
+                      const work = document.getElementById('work');
+                      if (perso && school && work) {
+                        perso.classList.remove('hidden');
+                        school.classList.add('hidden');
+                        work.classList.add('hidden');
+                      }
+                    }}
+                  >
+                    {t.projects.tabs.personal}
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className={`p-1 rounded-xl transition-colors hover:bg-fuchsia-600 hover:text-white hover:cursor-pointer ${activeTabProjects === 'school' ? 'bg-fuchsia-600 text-white' : 'text-gray-300'
+                      }`}
+                    onClick={() => {
+                      setActiveTabProjects('school');
+                      const perso = document.getElementById('perso');
+                      const school = document.getElementById('school');
+                      const work = document.getElementById('work');
+                      if (perso && school && work) {
+                        perso.classList.add('hidden');
+                        school.classList.remove('hidden');
+                        work.classList.add('hidden');
+                      }
+                    }}
+                  >
+                    {t.projects.tabs.academic}
+                  </button>
+                </li>
+                <li>
+                  <button
+                    className={`p-1 rounded-xl transition-colors hover:bg-fuchsia-600 hover:text-white hover:cursor-pointer ${activeTabProjects === 'work' ? 'bg-fuchsia-600 text-white' : 'text-gray-300'
+                      }`}
+                    onClick={() => {
+                      setActiveTabProjects('work');
+                      const perso = document.getElementById('perso');
+                      const school = document.getElementById('school');
+                      const work = document.getElementById('work');
+                      if (perso && school && work) {
+                        perso.classList.add('hidden');
+                        school.classList.add('hidden');
+                        work.classList.remove('hidden');
+                      }
+                    }}
+                  >
+                    {t.projects.tabs.professional}
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projects.map((project) => (
+                <div id={project.type} key={project.id} className={project.type === activeTabProjects.toLowerCase() ? '' : 'hidden'}>
+                  <Card key={project.id} data={project} />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
         </section>
         <section className="p-6 min-h-screen" id="experience">
           <h2 className="text-4xl font-bold mb-6">{t.experience.title}</h2>
@@ -238,16 +232,15 @@ export default function Home() {
         <section className="p-6 min-h-screen" id="contact">
           <h2 className="text-4xl font-bold mb-6">{t.contact.title}</h2>
           <ContactSection />
-        <div className="flex justify-center mt-8">
-          <button 
-            className="px-4 py-2 bg-fuchsia-500 text-white rounded-lg hover:bg-fuchsia-600 hover:cursor-pointer transition-colors duration-300" 
-            onClick={() => 
-              {}
-            }
+          <div className="flex justify-center mt-8">
+            <button
+              className="px-4 py-2 bg-fuchsia-500 text-white rounded-lg hover:bg-fuchsia-600 hover:cursor-pointer transition-colors duration-300"
+              onClick={() => { }
+              }
             >
-             <Download className="inline-block mr-2" /> {t.contact.downloadCV}
-          </button>
-        </div>
+              <Download className="inline-block mr-2" /> {t.contact.downloadCV}
+            </button>
+          </div>
         </section>
       </main>
 

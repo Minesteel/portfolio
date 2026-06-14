@@ -24,7 +24,7 @@
         "info": "Infos",
         "passions": "Passions"
       },
-      "description": "Bonjour! Je m'appelle Loris Pineaud, un passionné de technologie et d'innovation. Actuellement en Master 1 de Génie Logiciel, je suis déterminé à devenir un ingénieur logiciel compétent et créatif. Mon parcours académique m'a permis d'acquérir des compétences solides en développement logiciel, en gestion de projets et en résolution de problèmes complexes. Je suis constamment à la recherche de nouvelles opportunités pour apprendre et grandir dans le domaine du génie logiciel.",
+      "description": "Bonjour! Je m'appelle Loris Pineaud, passionné par la technologie, la culture et le sport. Actuellement en Master Génie Logiciel, je suis déterminé à devenir un ingénieur logiciel compétent et créatif. Mon parcours académique m'a permis d'acquérir des compétences solides en développement logiciel, en gestion de projets et en résolution de problèmes complexes. Je suis constamment à la recherche de nouvelles opportunités pour apprendre et grandir dans le domaine du génie logiciel.",
       "info": {
         "age": "Âge",
         "years": "ans",
@@ -33,7 +33,7 @@
         "email": "Email",
         "phone": "Téléphone"
       },
-      "passions": "En dehors du codage, j'aime explorer les dernières tendances technologiques, participer à des hackathons et contribuer à des projets open source. J'apprécie également la lecture de livres sur le développement personnel et la technologie, ainsi que le voyage pour découvrir de nouvelles cultures et perspectives."
+      "passions": "En dehors du codage, je suis passionné par des activités physiques tel que la boxe, des sports de glisse mais aussi des danses de salon. J'apprécie également la lecture de livres sur le développement personnel et philosophique mais aussi des romans fantastiques ou de science-fiction. Enfin, j'aime voyager pour découvrir de nouvelles cultures et perspectives."
     },
     "skills": {
       "title": "- Compétences -"

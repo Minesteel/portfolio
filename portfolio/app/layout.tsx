@@ -31,10 +31,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LanguageProvider>
           <div className="flex flex-col h-screen">
             <Header isCollapsed={isCollapsed} toggleSidebar={toggleSidebar} />
-            
+
             <div className="flex flex-1 overflow-hidden">
               <Sidenav isCollapsed={isCollapsed} />
-              
+
               <main className="flex-1 overflow-y-auto">
                 <div className="">
                   {children}

@@ -16,12 +16,6 @@ const ContactSection: React.FC = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Données envoyées :', formData);
-    alert(t.contact.form.success);
-  };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -34,7 +28,8 @@ const ContactSection: React.FC = () => {
         <p className="text-gray-400 mt-2">{t.contact.sectionSubtitle}</p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form action="https://api.web3forms.com/submit" method="POST" className="space-y-6">
+        <input type="hidden" name="access_key" value="7e3cd618-f6ff-49c9-83a7-c78a03b8e1b6"></input>
         {/* Champ Nom */}
         <div>
           <label htmlFor="name" className="block text-sm font-semibold mb-1">
@@ -87,9 +82,9 @@ const ContactSection: React.FC = () => {
         </div>
 
         {/* Bouton Envoyer */}
-        <button 
-        className="w-full px-4 py-2 bg-fuchsia-500 text-white rounded-lg hover:bg-fuchsia-600 hover:cursor-pointer transition-colors duration-300" 
-        type="submit"
+        <button
+          className="w-full px-4 py-2 bg-fuchsia-500 text-white rounded-lg hover:bg-fuchsia-600 hover:cursor-pointer transition-colors duration-300"
+          type="submit"
         >
           {t.contact.form.submit}
         </button>

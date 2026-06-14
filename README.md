@@ -202,18 +202,6 @@ L'application est prête à être déployée sur :
 
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
 
-## ✨ Améliorations futures
-
-- [ ] Ajouter des animations au scroll
-- [ ] Implémentation de la recherche
-- [ ] Mode sombre/clair
-- [ ] Optimisation SEO avancée
-- [ ] Tests unitaires avec Jest
-
 ## 👨‍💻 Auteur
 
-Portfolio personnel créé avec ❤️
-
----
-
-Pour plus d'informations sur Next.js, consultez la [documentation officielle](https://nextjs.org/docs).
+Loris Pineaud

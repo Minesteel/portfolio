@@ -1,22 +1,22 @@
 {
-    "experiences" : [
-        {
-            "date": "2025 - Présent",
-            "title": "Master Génie Logiciel",
-            "company": "Université de Bordeaux Science et Technologie",
-            "description": "Spécialisation en architecture logicielle et cloud computing."
-        },
-        {
-            "date": "2021 - 2025",
-            "title": "Licence Informatique",
-            "company": "Université de Bordeaux Science et Technologie",
-            "description": "Fondamentaux de la programmation, structures de données et algorithmes."
-        },
-        {
-            "date": "2018 - 2021",
-            "title": "Baccalauréat Scientifique",
-            "company": "Lycée Les Iris, Lormont",
-            "description": "Spécialité Mathématiques, Science de l'Ingénieur et Physique."
-        }
-    ]
+  "experiences": [
+    {
+      "date": "2025 - Présent",
+      "title": "Master Génie Logiciel",
+      "company": "Université de Bordeaux Science et Technologie",
+      "description": "Spécialisation Génie logiciel."
+    },
+    {
+      "date": "2021 - 2025",
+      "title": "Licence Informatique",
+      "company": "Université de Bordeaux Science et Technologie",
+      "description": "Fondamentaux de la programmation, structures de données et algorithmes."
+    },
+    {
+      "date": "2018 - 2021",
+      "title": "Baccalauréat Scientifique",
+      "company": "Lycée Les Iris, Lormont",
+      "description": "Spécialité Mathématiques, Science de l'Ingénieur et Physique."
+    }
+  ]
 }
