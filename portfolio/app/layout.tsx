@@ -1,8 +1,13 @@
 import LayoutClient from '@/components/LayoutClient'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 import { Geist, Geist_Mono } from "next/font/google";
-// @ts-ignore
+import type { Metadata } from 'next'
 import "./globals.css";
+
+export const metadata: Metadata = {
+  title: 'Portfolio',
+  description: 'Mon portfolio',
+}
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
